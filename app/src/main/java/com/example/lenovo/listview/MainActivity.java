@@ -8,7 +8,6 @@ import android.widget.Button;
 
 import com.example.lenovo.listview.BasicListView.BasicListViewActivity;
 import com.example.lenovo.listview.CustomActivity.CustomActivity;
-import com.example.lenovo.listview.CustomActivity.CustomAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,17 +16,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn1 = findViewById(R.id.btn1);
+        Button btnBasic = findViewById(R.id.btnBasic);
+        Button btnCustom = findViewById(R.id.btnCustom);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btnBasic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CustomActivity.class);
+                Intent intent = new Intent(MainActivity.this, BasicListViewActivity.class);
                 startActivity(intent);
                 finish();
 
             }
         });
+
+        btnCustom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CustomActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 
 

@@ -37,6 +37,7 @@ public class CustomActivity extends AppCompatActivity {
         }
 
         //3.어댑터 세팅하기 -> CustomAdapter를 만들기 시작한다.
+        //초기화 할 때 한 번 어댑터에 데이터를 인자값으로 넘겨준다
         CustomAdapter adapter = new CustomAdapter(data);
 
         //4.Listview 연결하기
